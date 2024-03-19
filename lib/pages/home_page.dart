@@ -1,18 +1,18 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, prefer_const_constructors_in_immutables
 
-import 'package:dokuha/pages/explore.dart';
-import 'package:dokuha/pages/library.dart';
-import 'package:dokuha/pages/settings.dart';
+import 'package:dokuha/pages/explore/explore_page.dart';
+import 'package:dokuha/pages/library/library_page.dart';
+import 'package:dokuha/pages/settings/settings_page.dart';
 import 'package:flutter/material.dart';
 
-class Home extends StatefulWidget {
-  Home({super.key});
+class HomePage extends StatefulWidget {
+  HomePage({super.key});
 
   @override
-  State<Home> createState() => _HomeState();
+  State<HomePage> createState() => _HomeState();
 }
 
-class _HomeState extends State<Home> {
+class _HomeState extends State<HomePage> {
   int _selectedIndex = 0;
 
   void _navigateBottomBar(int index) {
@@ -22,15 +22,14 @@ class _HomeState extends State<Home> {
   }
 
   final List _pages = [
-    Library(),
-    Explore(),
-    Settings(),
+    LibraryPage(),
+    ExplorePage(),
+    SettingsPage(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Dokuha")),
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
