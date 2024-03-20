@@ -1,9 +1,16 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:dokuha/pages/home_page.dart';
+import 'package:dokuha/themes/theme_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const Dokuha());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => ThemeProvider(),
+      child: const Dokuha(),
+    ),
+  );
 }
 
 class Dokuha extends StatelessWidget {
@@ -13,7 +20,7 @@ class Dokuha extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(),
+      theme: Provider.of<ThemeProvider>(context).themeData,
       home: HomePage(),
     );
   }

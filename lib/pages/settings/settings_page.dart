@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:dokuha/pages/settings/appearance_settings_page.dart';
 import 'package:flutter/material.dart';
 
 class SettingsPage extends StatelessWidget {
@@ -9,7 +10,7 @@ class SettingsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Settings")),
-      body: Column(
+      body: ListView(
         children: [
           ListTile(
             minLeadingWidth: 40,
@@ -20,6 +21,14 @@ class SettingsPage extends StatelessWidget {
             minLeadingWidth: 40,
             leading: Icon(Icons.palette_outlined),
             title: Text("Appearance"),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => AppearanceSettings(),
+                ),
+              );
+            },
           ),
           ListTile(
             minLeadingWidth: 40,
