@@ -1,17 +1,17 @@
 class Book {
-  String name;
+  String title;
   String path;
-  String synopsis;
+  String description;
   List<String> author;
-  List<String> genre;
+  List<String> subject;
   int pages;
 
   Book({
-    required this.name,
+    required this.title,
     required this.path,
-    required this.synopsis,
+    required this.description,
     required this.author,
-    required this.genre,
+    required this.subject,
     required this.pages,
   });
 }

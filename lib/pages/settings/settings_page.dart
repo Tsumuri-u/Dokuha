@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:dokuha/pages/settings/appearance_settings_page.dart';
+import 'package:dokuha/pages/settings/storage_settings.dart';
 import 'package:flutter/material.dart';
 
 class SettingsPage extends StatelessWidget {
@@ -39,6 +40,14 @@ class SettingsPage extends StatelessWidget {
             minLeadingWidth: 40,
             leading: Icon(Icons.folder_outlined),
             title: Text("Storage"),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => StorageSettings(),
+                ),
+              );
+            },
           ),
           ListTile(
             minLeadingWidth: 40,

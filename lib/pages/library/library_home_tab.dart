@@ -1,3 +1,5 @@
+import 'package:dokuha/components/book_info.dart';
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 
 class LibraryHome extends StatelessWidget {
@@ -14,8 +16,18 @@ class LibraryHome extends StatelessWidget {
         mainAxisSpacing: 10,
         crossAxisCount: 3,
         children: <Widget>[
-          Container(
-            color: Colors.teal[100],
+          InkWell(
+            child: Container(
+              color: Colors.teal[100],
+            ),
+            onTap: () {
+              showModalBottomSheet(
+                context: context,
+                builder: (BuildContext context) {
+                  return BookInfo();
+                },
+              );
+            },
           ),
           Container(
             color: Colors.teal[200],

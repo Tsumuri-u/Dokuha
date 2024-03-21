@@ -23,12 +23,13 @@ class _LibraryPageState extends State<LibraryPage> {
       ),
       body: Column(
         children: [
-          // Search bar
+          // Search bar (NON FUNCTIONAL)
           Container(
             padding: const EdgeInsets.all(12),
             margin: const EdgeInsets.symmetric(horizontal: 25),
             decoration: BoxDecoration(
-              color: Colors.grey[100],
+              color: Theme.of(context).colorScheme.surface,
+              border: Border.all(color: Theme.of(context).colorScheme.secondary),
               borderRadius: BorderRadius.circular(18),
             ),
             child: Row(
