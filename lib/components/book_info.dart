@@ -5,6 +5,7 @@
 buttons:
   BIG read button
   favorite button
+  add to bookshelf button
   bookmarks menu
   delete button
   download button if from server

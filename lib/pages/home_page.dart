@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, prefer_const_constructors_in_immutables
 
+import 'package:dokuha/pages/bookshelves/bookshelves_page.dart';
 import 'package:dokuha/pages/explore/explore_page.dart';
 import 'package:dokuha/pages/library/library_page.dart';
 import 'package:dokuha/pages/settings/settings_page.dart';
@@ -23,6 +24,7 @@ class _HomeState extends State<HomePage> {
 
   final List _pages = [
     LibraryPage(),
+    BookshelvesPage(),
     ExplorePage(),
     SettingsPage(),
   ];
@@ -31,19 +33,23 @@ class _HomeState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _pages[_selectedIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _selectedIndex,
-        onTap: _navigateBottomBar,
-        items: [
-          BottomNavigationBarItem(
+      bottomNavigationBar: NavigationBar(
+        selectedIndex: _selectedIndex,
+        onDestinationSelected: _navigateBottomBar,
+        destinations: [
+          NavigationDestination(
             icon: Icon(Icons.menu_book_rounded),
             label: "Library",
           ),
-          BottomNavigationBarItem(
+          NavigationDestination(
+            icon: Icon(Icons.book),
+            label: "Bookshelves",
+          ),
+          NavigationDestination(
             icon: Icon(Icons.travel_explore_rounded),
             label: "Explore",
           ),
-          BottomNavigationBarItem(
+          NavigationDestination(
             icon: Icon(Icons.settings),
             label: "Settings",
           )
