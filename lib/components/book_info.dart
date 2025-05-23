@@ -33,6 +33,7 @@ class _BookInfoState extends State<BookInfo> {
     return Column(
       children: [
         Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // book cover,
             Column(

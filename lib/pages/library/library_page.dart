@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+import 'dart:io';
 import 'package:dokuha/components/book_info.dart';
+import 'package:epub_pro/epub_pro.dart';
 import 'package:flutter/material.dart';
 
 class LibraryPage extends StatefulWidget {
@@ -24,10 +26,10 @@ class _LibraryPageState extends State<LibraryPage> {
         mainAxisSpacing: 10,
         // let user change this
         crossAxisCount: 3,
-        children: <Widget>[
+        children: [
           InkWell(
-            child: Container(
-              color: Colors.teal[100],
+            child: Ink.image(
+              image: AssetImage('assets/images/kagerou.jpg'),
             ),
             onTap: () {
               showModalBottomSheet(
@@ -37,15 +39,6 @@ class _LibraryPageState extends State<LibraryPage> {
                 },
               );
             },
-          ),
-          Container(
-            color: Colors.teal[200],
-          ),
-          Container(
-            color: Colors.teal[300],
-          ),
-          Container(
-            color: Colors.teal[400],
           ),
         ],
       ),
