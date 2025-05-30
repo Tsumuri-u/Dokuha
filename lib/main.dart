@@ -1,5 +1,5 @@
 // ignore_for_file: prefer_const_constructors
-import 'package:dokuha/pages/home_page.dart';
+import 'package:dokuha/pages/widget_tree.dart';
 import 'package:dokuha/themes/theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -21,7 +21,7 @@ class Dokuha extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: Provider.of<ThemeProvider>(context).themeData,
-      home: HomePage(),
+      home: WidgetTree(),
     );
   }
 }

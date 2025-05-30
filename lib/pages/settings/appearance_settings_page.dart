@@ -19,8 +19,11 @@ class AppearanceSettings extends StatelessWidget {
             minLeadingWidth: 40,
             title: Text("Dark Theme"),
             trailing: Switch(
-              value: Provider.of<ThemeProvider>(context, listen: false).isDarkMode,
-              onChanged: (value) => Provider.of<ThemeProvider>(context, listen: false).toggleTheme(),
+              value:
+                  Provider.of<ThemeProvider>(context, listen: false).isDarkMode,
+              onChanged: (value) =>
+                  Provider.of<ThemeProvider>(context, listen: false)
+                      .toggleTheme(),
             ),
           ),
         ],
