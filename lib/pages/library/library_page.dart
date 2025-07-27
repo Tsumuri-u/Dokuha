@@ -44,15 +44,18 @@ class _LibraryPageState extends State<LibraryPage> {
         // let user change this
         crossAxisCount: 3,
         children: [
-          InkWell(
-            onTap: () {
-              showModalBottomSheet(
-                context: context,
-                builder: (BuildContext context) {
-                  return BookInfo();
-                },
-              );
-            },
+          Ink.image(
+            image: AssetImage('assets/images/kagerou.jpg'),
+            child: InkWell(
+              onTap: () {
+                showModalBottomSheet(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return BookInfo();
+                  },
+                );
+              },
+            ),
           ),
         ],
       ),

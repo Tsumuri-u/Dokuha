@@ -77,10 +77,10 @@ packages:
     dependency: "direct main"
     description:
       name: epub_pro
-      sha256: "2d98471b0fd8415ef875329d7bf58926528f82954ed6d1783a20050b94bf3dd0"
+      sha256: e158d3c0d7719cf20254fcd49be5ad678248432f92a1217af5bf35ddb4a71f78
       url: "https://pub.dev"
     source: hosted
-    version: "5.0.5"
+    version: "5.4.2"
   fake_async:
     dependency: transitive
     description:
@@ -101,10 +101,10 @@ packages:
     dependency: "direct main"
     description:
       name: file_picker
-      sha256: "77f8e81d22d2a07d0dee2c62e1dda71dc1da73bf43bb2d45af09727406167964"
+      sha256: ef9908739bdd9c476353d6adff72e88fd00c625f5b959ae23f7567bd5137db0a
       url: "https://pub.dev"
     source: hosted
-    version: "10.1.9"
+    version: "10.2.0"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -292,10 +292,10 @@ packages:
     dependency: transitive
     description:
       name: posix
-      sha256: f0d7856b6ca1887cfa6d1d394056a296ae33489db914e365e2044fdada449e62
+      sha256: "6323a5b0fa688b6a010df4905a56b00181479e6d10534cecfecede2aa55add61"
       url: "https://pub.dev"
     source: hosted
-    version: "6.0.2"
+    version: "6.0.3"
   provider:
     dependency: "direct main"
     description:
